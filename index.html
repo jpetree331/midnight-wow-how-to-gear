@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10162c">
+  <meta name="description" content="A friendly, sourced PvE gearing roadmap for level 90 Beast Mastery Hunters in World of Warcraft: Midnight Season 2, patch 12.1.5.">
+  <title>Midnight Field Guide — Beast Mastery Hunter PvE Gearing</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to guide</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Midnight Field Guide home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span><b>MIDNIGHT</b><small>FIELD GUIDE</small></span>
+    </a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#start">Start</a>
+      <a href="#routes">Gear paths</a>
+      <a href="#weekly">Checklist</a>
+      <a href="#hunter">BM Hunter</a>
+      <a href="#changes">What's new</a>
+      <a class="topnav-source" href="#sources">Sources ↗</a>
+    </nav>
+    <span class="header-status"><span class="live-dot"></span> SEASON 2 • PvE ONLY</span>
+  </header>
+
+  <div class="layout" id="top">
+    <aside class="side-rail" aria-label="Guide table of contents">
+      <div class="rail-label">YOUR ADVENTURE</div>
+      <a href="#start"><span>01</span> The first steps</a>
+      <a href="#routes"><span>02</span> Pick your path</a>
+      <a href="#ladder"><span>03</span> The gear ladder</a>
+      <a href="#weekly"><span>04</span> Weekly checklist</a>
+      <a href="#hunter"><span>05</span> Beast Mastery kit</a>
+      <a href="#target"><span>06</span> Chase this loot</a>
+      <a href="#changes"><span>07</span> What's changed</a>
+      <a href="#sources"><span>08</span> Sources & notes</a>
+      <div class="rail-divider"></div>
+      <div class="rail-progress">
+        <small>YOUR CHECKLIST</small>
+        <strong><span id="rail-count">0</span> <span class="muted">/ <span id="rail-total">0</span> done</span></strong>
+        <div class="progress-track" role="progressbar" aria-label="Checklist progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="rail-progress"><div id="rail-progress-fill"></div></div>
+        <a href="#weekly" class="rail-cta">Continue your hunt ↗</a>
+      </div>
+      <div class="rail-foot">PATCH 12.1.5<br>Last verified: <b>Oct 31, 2026</b></div>
+    </aside>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-glow"></div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 440 500" fill="none" role="img">
+            <defs>
+              <linearGradient id="sky" x1="50" y1="0" x2="420" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#BFC4FF"/><stop offset="1" stop-color="#44D5AD"/></linearGradient>
+              <linearGradient id="bow" x1="86" y1="48" x2="350" y2="440" gradientUnits="userSpaceOnUse"><stop stop-color="#FAD98F"/><stop offset="1" stop-color="#EF9A63"/></linearGradient>
+            </defs>
+            <circle cx="266" cy="210" r="140" stroke="#B8B3FF" stroke-opacity=".18" stroke-width="1"/>
+            <circle cx="266" cy="210" r="115" stroke="#B8B3FF" stroke-opacity=".26" stroke-width="1" stroke-dasharray="3 8"/>
+            <circle cx="266" cy="210" r="79" stroke="#C9C8FF" stroke-opacity=".18" stroke-width="24"/>
+            <circle cx="266" cy="210" r="55" fill="#E6E4FF" fill-opacity=".14"/>
+            <path d="M264 22L268 44M255 33H278M67 190l6 9 10 5-10 5-6 9-6-9-10-5 10-5 6-9Zm289 89 5 7 8 4-8 4-5 7-5-7-8-4 8-4 5-7Z" stroke="#FCD79F" stroke-linecap="round"/>
+            <path d="M113 79C24 142 17 281 102 364" stroke="url(#bow)" stroke-width="16" stroke-linecap="round"/>
+            <path d="M113 79L102 364" stroke="#E8ECFA" stroke-width="2.5"/>
+            <path d="M56 222H373" stroke="#F2B886" stroke-width="6" stroke-linecap="round"/>
+            <path d="M373 222l-36-17 7 17-7 17 36-17Z" fill="#F6D69E"/>
+            <path d="M91 218l-29-17v42l29-17" fill="#7DE0C2"/>
+            <path d="M170 358c12-46 42-87 72-98-15-28-12-50 3-74l24-20-9-42 45 19 15 25 38 6-17 26-34 13c22 17 46 34 51 55l-32-7 4 46c-9-10-22-14-32-8l-38 85h-96l12-26-41 27z" fill="#273450" stroke="#90A6E6" stroke-opacity=".55" stroke-width="3"/>
+            <path d="M256 169l13-45 34 15 11 32-17 22-20 1-21-25Z" fill="#A1ADD9" fill-opacity=".5"/>
+            <path d="M303 171l17 10-20 7" stroke="#F3DBA8" stroke-width="3" stroke-linecap="round"/>
+            <path d="M29 403c66-30 108-42 166-27 71-64 159-33 213-4M34 435c74-35 154-18 194-32 67-23 130-9 177 19" stroke="#48CFAA" stroke-opacity=".35" stroke-width="2"/>
+            <circle cx="108" cy="94" r="3" fill="#FAD89E"/><circle cx="359" cy="113" r="3" fill="#FAD89E"/><circle cx="387" cy="323" r="2" fill="#D9E1FF"/><circle cx="52" cy="301" r="2" fill="#CFE8FF"/>
+          </svg>
+        </div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span> THE RETURNING HUNTER'S HANDBOOK</div>
+          <h1 id="hero-title">Level 90.<br><em>Now let's gear.</em></h1>
+          <p class="hero-sub">A no-nonsense, beautifully organized PvE guide for your <strong>Beast Mastery Hunter</strong> in <strong>World of Warcraft: Midnight</strong>.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#start">Show me what to do <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="#weekly">My weekly checklist</a>
+          </div>
+          <div class="hero-meta"><span>PATCH <b>12.1.5</b></span><span>SEASON <b>02</b></span><span>CHECKED <b>OCT 31, 2026</b></span></div>
+        </div>
+      </section>
+
+      <section class="intro-ribbon" aria-label="Quick highlights">
+        <div><span class="ribbon-icon">✧</span><strong>Level cap 90</strong><small>Midnight endgame</small></div>
+        <div><span class="ribbon-icon green">◆</span><strong>Pack Leader</strong><small>Current BM choice</small></div>
+        <div><span class="ribbon-icon orange">⬡</span><strong>5 gear tracks</strong><small>266 → 334 baseline</small></div>
+        <div><span class="ribbon-icon violet">✦</span><strong>Fresh catch-up</strong><small>Patch 12.1.5</small></div>
+      </section>
+
+      <section id="start" class="chapter">
+        <div class="section-kicker">01 / THE FIRST STEPS</div>
+        <div class="section-title-row">
+          <div><h2>Just hit 90? <span>Start here.</span></h2><p>You don't have to raid or run high keys immediately. Get your foundations in place, then pick the content you enjoy.</p></div>
+          <span class="section-art" aria-hidden="true">01</span>
+        </div>
+        <div class="steps">
+          <article class="step-card"><span class="step-number">01</span><div class="step-body"><h3>Visit Silvermoon City</h3><p>Find the <strong>Great Vault</strong> inside the bank and <strong>Cuzolth</strong> (item upgrades). Silvermoon is your endgame hub.</p><div class="mini-tag">YOUR NEW HOME BASE</div></div></article>
+          <article class="step-card"><span class="step-number">02</span><div class="step-body"><h3>Replace your weakest pieces</h3><p>Finish available story/unlocks, collect world-event and catch-up rewards, queue Heroic dungeons, and work up to <strong>Mythic 0</strong> or comfortable Delves.</p><div class="mini-tag">GET THE EASY WINS</div></div></article>
+          <article class="step-card"><span class="step-number">03</span><div class="step-body"><h3>Fill Vault slots, then specialize</h3><p>Do the activities you enjoy to earn <strong>weekly Vault choices</strong>. Work toward <strong>4-piece Hunter tier</strong>, a better <strong>ranged weapon</strong>, and strong <strong>trinkets</strong>.</p><div class="mini-tag">BUILD YOUR MOMENTUM</div></div></article>
+        </div>
+        <div class="note note-gold"><span class="note-symbol">!</span><div><strong>Important: your old item-level expectations are obsolete.</strong> Midnight squished item levels. In Season 2, the main upgrade tracks are roughly <b>266–334</b> — not the 500+ numbers you might remember from older expansions.</div></div>
+      </section>
+
+      <section id="routes" class="chapter">
+        <div class="section-kicker">02 / CHOOSE YOUR ADVENTURE</div>
+        <div class="section-title-row"><div><h2>Three roads. <span>One stronger hunter.</span></h2><p>Choose how you actually like to play. Every path below is PvE.</p></div></div>
+        <div class="mode-picker" role="group" aria-label="Preferred playstyle">
+          <button type="button" class="mode-btn active" data-mode="solo" aria-pressed="true"><span>✶</span> Mostly solo</button>
+          <button type="button" class="mode-btn" data-mode="keys" aria-pressed="false"><span>⌁</span> Dungeons & keys</button>
+          <button type="button" class="mode-btn" data-mode="raid" aria-pressed="false"><span>✦</span> Raids</button>
+        </div>
+        <p class="mode-advice" id="mode-advice" aria-live="polite">Start with Bountiful Delves and Nightmare Prey for dependable solo-friendly Vault progression. The Labyrinth is another exciting route.</p>
+        <div class="route-grid">
+          <article class="route-card route-solo" data-route="solo"><div class="route-top"><span class="route-glyph">✶</span><span class="route-type">SOLO-FRIENDLY</span></div><h3>The lone ranger</h3><p>Progress without committing to a raid schedule or dungeon group.</p><ul><li><b>Tier 8+ Bountiful Delves:</b> Hero-track Great Vault potential (305 at Tier 8+).</li><li><b>Nightmare Prey:</b> Champion-track end rewards and Hero-track Vault choices.</li><li><b>Tier 11 Delves / Labyrinth:</b> tougher challenges, higher rewards, and opportunities to collect powerful gear.</li><li><b>Showdown / outdoor weeklies:</b> useful catch-up gear and currencies.</li></ul><a href="https://www.icy-veins.com/wow/great-vault-guide" target="_blank" rel="noopener noreferrer">Vault & Delves details ↗</a></article>
+          <article class="route-card route-keys" data-route="keys"><div class="route-top"><span class="route-glyph">⌁</span><span class="route-type">FIVE-PLAYER</span></div><h3>The dungeon path</h3><p>Best repeatable route for steady upgrades and chasing specific drops.</p><ul><li><b>Mythic 0:</b> drops Champion 1/6 gear (292).</li><li><b>+2 to +3:</b> 295 end-of-run; 305 Vault.</li><li><b>+6:</b> 305 end-of-run; 311 Vault.</li><li><b>+10 and up:</b> 311 end-of-run; Myth 1/6 (318) Vault and Ascendant Venomstone eligibility.</li></ul><a href="https://www.icy-veins.com/wow/great-vault-guide" target="_blank" rel="noopener noreferrer">Exact key reward table ↗</a></article>
+          <article class="route-card route-raid" data-route="raid"><div class="route-top"><span class="route-glyph">✦</span><span class="route-type">GROUP CONTENT</span></div><h3>The raid path</h3><p>Excellent for Hunter set pieces, rare weapons, trinkets, and bonus rolls.</p><ul><li><b>The Venomous Abyss:</b> main Season 2 raid and Hunter tier set.</li><li><b>Tidebound Grotto:</b> another Season 2 raid option.</li><li><b>Unbinding of Kith'ix:</b> new 12.1.5 single-boss raid with coveted Hunter drops.</li><li><b>Vault:</b> earn choices for 2 / 4 / 6 defeated raid bosses.</li></ul><a href="https://news.blizzard.com/en-us/article/24294369/midnight-season-2-is-now-live" target="_blank" rel="noopener noreferrer">Official Season 2 overview ↗</a></article>
+        </div>
+        <div class="note note-blue"><span class="note-symbol">i</span><div><strong>Most efficient mix:</strong> If you're comfortable grouping, a Tier 8+ Delve for the World Vault and a few dungeons for the Dungeon Vault cover two loot pools. Add raids when you're ready. More choices still result in <em>one selected gear item</em> per weekly Vault.</div></div>
+      </section>
+
+      <section id="ladder" class="chapter">
+        <div class="section-kicker">03 / UNDERSTAND THE SYSTEM</div>
+        <div class="section-title-row"><div><h2>The gear ladder <span>at a glance.</span></h2><p>Every item displays a track and rank, such as <b>Champion 2/6</b>. Higher tracks can be upgraded further.</p></div></div>
+        <div class="track-head"><span>TRACK</span><span>ITEM LEVEL RANGE</span><span>MISTCREST TYPE</span></div>
+        <div class="track-list" aria-label="Midnight Season 2 upgrade tracks">
+          <div class="track-row" style="--track-color:#74b6e6;--track-width:39%"><div class="track-name"><span class="track-star">✧</span><b>Adventurer</b><small>Entry gear</small></div><div class="track-meter"><div><span>266</span><strong>→</strong><span>282</span></div><i></i></div><span class="crest-name">Adventurer Mistcrest</span></div>
+          <div class="track-row" style="--track-color:#76d9b4;--track-width:51%"><div class="track-name"><span class="track-star">✧</span><b>Veteran</b><small>Heroic / LFR</small></div><div class="track-meter"><div><span>279</span><strong>→</strong><span>295</span></div><i></i></div><span class="crest-name">Veteran Mistcrest</span></div>
+          <div class="track-row" style="--track-color:#ca9af9;--track-width:64%"><div class="track-name"><span class="track-star">✦</span><b>Champion</b><small>M0 / Normal raid</small></div><div class="track-meter"><div><span>292</span><strong>→</strong><span>308</span></div><i></i></div><span class="crest-name">Champion Mistcrest</span></div>
+          <div class="track-row" style="--track-color:#f4ba78;--track-width:81%"><div class="track-name"><span class="track-star">✦</span><b>Hero</b><small>Heroic raid / high Delves</small></div><div class="track-meter"><div><span>305</span><strong>→</strong><span>321</span></div><i></i></div><span class="crest-name">Hero Mistcrest</span></div>
+          <div class="track-row" style="--track-color:#fa8bc0;--track-width:100%"><div class="track-name"><span class="track-star">★</span><b>Myth</b><small>Mythic / top Vault</small></div><div class="track-meter"><div><span>318</span><strong>→</strong><span>334</span></div><i></i></div><span class="crest-name">Myth Mistcrest</span></div>
+        </div>
+        <div class="quick-facts">
+          <div class="fact"><span>20</span><b>Mistcrests</b><small>per normal upgrade step</small></div>
+          <div class="fact"><span>6/6</span><b>Maximum rank</b><small>per track</small></div>
+          <div class="fact"><span>0</span><b>Valorstones</b><small>Midnight removed them</small></div>
+          <div class="fact"><span>∞</span><b>Crest cap lifted</b><small>Week of Oct 20, 2026</small></div>
+        </div>
+        <details class="explain"><summary>How do I actually upgrade gear? <span>+</span></summary><div><p>Speak to <b>Cuzolth</b>, the item-upgrade NPC at approximately <b>48.6, 62 in Silvermoon City</b>. Place your item in the upgrade interface. Each step normally uses 20 matching Mistcrests plus a little gold.</p><p><b>Slot high-watermark rule:</b> once you've reached an item level in a slot, upgrades to that level on a replacement item are free of additional Mistcrests. Think of upgrading your <em>slot</em>, not just one particular item.</p><p><b>Do not over-invest</b> in low-track gear if you expect a stronger drop shortly. Higher-content loot often starts several upgrade steps ahead.</p></div></details>
+        <details class="explain"><summary>What are the best weekly Vault breakpoints? <span>+</span></summary><div><p>The <b>Great Vault is in Silvermoon's bank</b>. You choose <strong>one</strong> weekly item from the unlocked options. Dungeon choices require <b>1 / 4 / 8</b> qualifying dungeons, Raid choices <b>2 / 4 / 6</b> bosses, and World choices <b>2 / 4 / 8</b> world activities or Delves.</p><p><b>Helpful targets:</b> a Tier 8+ Bountiful Delve gives a <b>305 Hero-track</b> World Vault reward; a +10 Mythic+ provides a <b>318 Myth-track</b> Dungeon Vault option. Higher rewards are subject to the category and activity rules; check the in-game Vault tooltip.</p></div></details>
+        <div class="source-line">Numbers verified against <a href="https://www.icy-veins.com/wow/world-of-warcraft-gear-upgrading-guide" target="_blank" rel="noopener noreferrer">Midnight gearing</a>, <a href="https://www.icy-veins.com/wow/great-vault-guide" target="_blank" rel="noopener noreferrer">Great Vault</a>, and <a href="https://worldofwarcraft.blizzard.com/en-us/news/24304162/" target="_blank" rel="noopener noreferrer">12.1.5 patch notes</a>.</div>
+      </section>
+
+      <section id="weekly" class="chapter">
+        <div class="section-kicker">04 / YOUR ADVENTURE LOG</div>
+        <div class="section-title-row"><div><h2>A weekly plan <span>that doesn't overwhelm.</span></h2><p>Tick things off as you go. Your progress is saved in this browser. These are priorities, not mandatory chores.</p></div></div>
+        <div class="checklist-shell">
+          <div class="checklist-bar"><div><span class="checklist-eyebrow">YOUR PROGRESS</span><strong id="checklist-progress">0 of 13 completed</strong></div><div class="checklist-actions"><span class="status-mark" id="checklist-status">Adventure awaits</span><button id="reset-checklist" type="button" title="Clear this checklist">Reset checkmarks</button></div></div>
+          <div class="checklist-group"><div class="checklist-group-title"><span class="group-pill mint">FIRST LOG-IN</span><span>Get your bearings</span></div>
+            <label class="task"><input type="checkbox" data-task="bank"><span class="check-indicator"></span><span><b>Visit the Silvermoon Great Vault and item upgrader.</b><small>Find the bank and Cuzolth so you know where to return.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="spec"><span class="check-indicator"></span><span><b>Set a current Pack Leader talent loadout.</b><small>Use the copyable builds in the BM section below.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="unlocks"><span class="check-indicator"></span><span><b>Pick up current catch-up and world-content introductions.</b><small>Unlock the appropriate Midnight systems and Season 2 activities.</small></span></label>
+          </div>
+          <div class="checklist-group"><div class="checklist-group-title"><span class="group-pill gold">EACH RESET</span><span>Best value for your time</span></div>
+            <label class="task"><input type="checkbox" data-task="vault"><span class="check-indicator"></span><span><b>Open your Vault and choose your best upgrade.</b><small>NA resets Tuesday; compare the actual choices before picking.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="world"><span class="check-indicator"></span><span><b>Fill at least one World Vault slot.</b><small>Tier 8+ Bountiful Delves or Nightmare Prey are ideal solo-friendly choices.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="dungeons"><span class="check-indicator"></span><span><b>Fill a Dungeon Vault slot if you enjoy groups.</b><small>A comfortable key is better than burning out chasing a +10.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="raid"><span class="check-indicator"></span><span><b>Raid if you want tier and priority loot.</b><small>Venomous Abyss, Tidebound Grotto, and the Kith'ix encounter.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="catchup"><span class="check-indicator"></span><span><b>Do an appropriate weekly catch-up activity.</b><small>Showdowns, Aqir Invasions, and other rewarding outdoor events.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="voidcore"><span class="check-indicator"></span><span><b>Check your bonus-roll and Venomstone progress.</b><small>Orin's 12.1.5 quests can unlock extra options.</small></span></label>
+          </div>
+          <div class="checklist-group"><div class="checklist-group-title"><span class="group-pill purple">WHEN READY</span><span>Longer-term goals</span></div>
+            <label class="task"><input type="checkbox" data-task="tier"><span class="check-indicator"></span><span><b>Complete your 4-piece Skulking Viper tier set.</b><small>Use the Catalyst on eligible pieces; don't wait forever for perfect stats.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="weapon"><span class="check-indicator"></span><span><b>Improve your weapon, then your trinkets.</b><small>These are high-value BM upgrade priorities.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="craft"><span class="check-indicator"></span><span><b>Plan your two crafted embellishments.</b><small>Consider long-term belt/bracers or a weapon to bridge a weak slot.</small></span></label>
+            <label class="task"><input type="checkbox" data-task="sim"><span class="check-indicator"></span><span><b>Sim two close choices before spending scarce resources.</b><small>Raidbots / SimulationCraft beat a universal BiS list.</small></span></label>
+          </div>
+        </div>
+        <p class="fine-print">Checklist stays on this device only. Reset clears the checkmarks (not your game progress). Nothing is sent to a server.</p>
+      </section>
+
+      <section id="hunter" class="chapter">
+        <div class="section-kicker">05 / BUILT FOR BEAST MASTERY</div>
+        <div class="section-title-row"><div><h2>Your hunter's <span>personal loadout.</span></h2><p>Only the essentials, with details where they actually affect gearing.</p></div></div>
+        <div class="hunter-feature">
+          <div class="feature-emblem"><span>♜</span><small>HUNTER</small></div>
+          <div><span class="feature-kicker">CURRENT PATCH RECOMMENDATION</span><h3>Pack Leader, in every PvE mode.</h3><p>Older tuning articles favored Dark Ranger for some fights. The updated 12.1.5 recommendations now favor <b>Pack Leader</b> for single-target, cleave, Mythic+, and Delves. Don't gear for an outdated build.</p><a href="https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-spec-builds-talents" target="_blank" rel="noopener noreferrer">View the current class builds ↗</a></div>
+        </div>
+        <div class="stat-layout">
+          <article class="glass-card"><div class="card-eyebrow">SECONDARY STATS / GENERAL & M+</div><h3>Mastery first. <span>Crit next.</span></h3><div class="stat-bars"><div><span>MASTERY</span><i style="--w:100%;--c:#62dfb6"></i><b>#1</b></div><div><span>CRITICAL STRIKE</span><i style="--w:81%;--c:#f5c478"></i><b>#2</b></div><div><span>VERSATILITY</span><i style="--w:61%;--c:#bbabff"></i><b>#3</b></div><div><span>HASTE</span><i style="--w:42%;--c:#7abce8"></i><b>#4</b></div></div><p>For <b>pure single-target</b>, use <b>Mastery → Haste → Crit → Versatility</b>. Agility and weapon damage remain vital. These are priorities, <em>not</em> simulated DPS percentages.</p></article>
+          <article class="glass-card"><div class="card-eyebrow">SPENDING MISTCRESTS</div><h3>Upgrade in <span>this order.</span></h3><ol class="upgrade-list"><li><span>01</span><strong>Ranged weapon</strong><small>Major damage impact</small></li><li><span>02</span><strong>Trinkets</strong><small>Especially strong effects</small></li><li><span>03</span><strong>Helm / chest / legs</strong><small>High-stat armor slots</small></li><li><span>04</span><strong>Shoulders / gloves / belt / boots</strong><small>Solid secondary upgrades</small></li><li><span>05</span><strong>Rings / neck / cloak / bracers</strong><small>Finish lower-priority slots</small></li></ol><p class="small-muted">Exception: equip a missing 2- or 4-piece tier bonus before fussing about minor stat optimizations.</p></article>
+        </div>
+        <div class="talent-panel">
+          <div><div class="card-eyebrow">ONE-CLICK TALENT IMPORT</div><h3>Current Pack Leader builds</h3><p>Copy a loadout, then in WoW open Talents → Loadouts → Import. These codes are from the Icy Veins 12.1.5 guide, last checked Oct 31.</p></div>
+          <div class="talent-buttons">
+            <button type="button" class="copy-btn" data-copy="C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwwMsBAgZYMzyMDzYmhhZGjZGzMjZMziZmxMmBjpZAAAAAzAAAwYmZAmZjxGMLgtBgB"><span>✦</span><b>Raid single-target</b><small>Copy code</small></button>
+            <button type="button" class="copy-btn" data-copy="C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGmZmlZGzMzMjZGMzYmhZGzYmFzMjZMDGTzAAAAAAAAgxMzAMzGZDmFw2AwA"><span>✧</span><b>Raid with adds</b><small>Copy code</small></button>
+            <button type="button" class="copy-btn" data-copy="C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGzMzs8AzYmZmZMzgZGzMMzYmZGbzMjZMDLjpZAAAAAAAAgHYMGwMbEwsA2GAA"><span>⌁</span><b>Mythic+</b><small>Copy code</small></button>
+            <button type="button" class="copy-btn" data-copy="C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGzMzs8AzYmZmZMzgZGzMMzYmZGMGzYmhx0AAAAAAAAAzMGDYmNCWmZBsNAA"><span>✶</span><b>Solo Delves</b><small>Copy code</small></button>
+          </div>
+          <div class="copy-status" id="copy-status" role="status" aria-live="polite"></div>
+        </div>
+        <div class="tips-grid">
+          <article><span class="tip-icon">♧</span><h4>Solo pet tip</h4><p>Let your pet hold enemies, heal with Mend Pet, and use defensive cooldowns proactively. Pick the pet family and utility that suit the encounter.</p></article>
+          <article><span class="tip-icon">✢</span><h4>Dungeon tip</h4><p>Turn pet Growl off in groups; keep Counter Shot and traps ready. You can maintain damage while moving, so prioritize mechanics.</p></article>
+          <article><span class="tip-icon">◇</span><h4>Don't obsess over percentages</h4><p>Higher item level, a great trinket, and tier bonuses often beat a smaller item's “ideal” secondary stats. Sim close choices.</p></article>
+        </div>
+      </section>
+
+      <section id="target" class="chapter">
+        <div class="section-kicker">06 / WISHLIST & CRAFTING</div>
+        <div class="section-title-row"><div><h2>Loot worth <span>hunting down.</span></h2><p>These are current PvE targets, not a rigid rule to ignore upgrades along the way.</p></div></div>
+        <div class="loot-grid">
+          <article class="loot-card rare"><div class="loot-icon">➶</div><div><div class="loot-tag">RAID WEAPON</div><h3>Caustic Repose Greatbow</h3><p><b>Source:</b> Ula'tek, Venomous Abyss. A top-tier endgame weapon; consider bonus rolling Ula'tek.</p></div></article>
+          <article class="loot-card rare"><div class="loot-icon">✴</div><div><div class="loot-tag">RAID TRINKET</div><h3>Twisted Horror's Tendril</h3><p><b>Source:</b> Kith'ix. One of the highest-priority current trinkets for BM.</p></div></article>
+          <article class="loot-card rare"><div class="loot-icon">♥</div><div><div class="loot-tag">RAID TRINKET</div><h3>Voracious Heart of Ula'tek</h3><p><b>Source:</b> Ula'tek. Strong pairing with Twisted Horror's Tendril.</p></div></article>
+          <article class="loot-card uncommon"><div class="loot-icon">❯</div><div><div class="loot-tag">DUNGEON WEAPON</div><h3>Sinseared Repeater</h3><p><b>Source:</b> Murder Row. A useful Mythic+ weapon target while chasing raid loot.</p></div></article>
+        </div>
+        <div class="craft-split">
+          <div class="craft-copy"><span class="group-pill gold">CRAFTING PLAN</span><h3>Think two embellishments, not fifteen.</h3><p>The longer-term BM option is a <b>Farstrider's Trophy Belt</b> and <b>Farstrider's Plated Bracers</b>, both with <b>Arcanoweave Lining</b> and typically Crit/Mastery.</p><p>Need a powerful ranged weapon <em>right now</em>? A crafted <b>Aln'hara Sprigshot</b> with <b>Hunter's Ritual Stone</b> can bridge the gap, but a high-end raid bow could replace it. Check the current guide before spending expensive crafting materials.</p><a href="https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-gear-best-in-slot" target="_blank" rel="noopener noreferrer">Current BM crafting recommendations ↗</a></div>
+          <div class="craft-side"><div class="craft-side-top">HUNTER TIER SET</div><div class="set-rune">✧</div><h3>Skulking Viper's Ambush</h3><p>Work toward <strong>4 pieces</strong>. The Midnight Catalyst can convert eligible gear into tier pieces, while preserving the source item's secondary stats and passive effects.</p><span class="set-tip">Don't delay your 4-piece just for prettier secondaries.</span></div>
+        </div>
+        <div class="gear-extra"><div><h4>Starter gems & enchants</h4><p><b>Indecipherable Eversong Diamond</b> (one socket), <b>Flawless Deadly Amethyst</b> (other sockets), and weapon enchant <b>Rite of the Hash'ey</b> are current recommendations. Upgrade inexpensive items first; save premium enchants for gear you'll keep.</p><a href="https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-gems-enchants-consumables" target="_blank" rel="noopener noreferrer">Full enchant list ↗</a></div><div><h4>Your bonus-roll priority</h4><p><b>Nebulous Voidcores</b> let you target additional loot. For BM, Ula'tek is a strong first bonus-roll target because of the weapon, neck, chest, and trinket; then consider Kith'ix.</p><a href="https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-gear-best-in-slot" target="_blank" rel="noopener noreferrer">See the current target list ↗</a></div></div>
+      </section>
+
+      <section id="changes" class="chapter">
+        <div class="section-kicker">07 / RETURNING FROM THE WAR WITHIN</div>
+        <div class="section-title-row"><div><h2>What changed <span>while you were away?</span></h2><p>Only the updates that matter for a returning level 90 Hunter.</p></div></div>
+        <div class="changes-grid">
+          <div class="change"><span class="change-num">01</span><h3>Midnight raised the cap to 90</h3><p>You're now playing the second Worldsoul Saga expansion, with Silvermoon as a major hub. Old expansion gear quickly gives way to new seasonal rewards.</p></div>
+          <div class="change"><span class="change-num">02</span><h3>Numbers got squished</h3><p>Item levels and stats are drastically smaller than in The War Within. The Season 2 ladder runs from Adventurer 266–282 to Myth 318–334.</p></div>
+          <div class="change"><span class="change-num">03</span><h3>Crests got simpler</h3><p>Upgrade costs are mostly a matching <b>Mistcrest</b> plus gold. No Valorstones. The October 20 update lifted the seasonal crest cap.</p></div>
+          <div class="change"><span class="change-num">04</span><h3>More solo ways to gear</h3><p><b>Prey</b>, updated <b>Delves</b>, the new <b>Labyrinth of Kindo'jan</b>, and world Showdown activities widen your PvE options.</p></div>
+          <div class="change"><span class="change-num">05</span><h3>Tier & bonus rolls evolved</h3><p>The Catalyst preserves the source item's stats. Season 2 introduced <b>Nebulous Voidcores</b>, and 12.1.5 added an extra route through Orin Straylight.</p></div>
+          <div class="change"><span class="change-num">06</span><h3>A new power-up arrived</h3><p>Collect <b>10 Ascendant Venomstones</b> from qualifying higher-end content to raise eligible fully upgraded Season 2 weapons, trinkets, or necks, up to <b>340</b>.</p></div>
+        </div>
+        <div class="midseason">
+          <div class="midseason-top"><span class="group-pill mint">NEW IN 12.1.5</span><span>OCTOBER 13, 2026</span></div><h3>One more thing: check in with Orin.</h3><p>In Silvermoon, progress the <b>In the Catalyst's Shadow → Prismatic Potential → Umbral Blessings of the Catalyst</b> questline to unlock an additional weekly <b>Nebulous Voidcore</b> purchase option. Follow with <b>Ancient Depths, Ancient Venom → Ascending with Venomstones</b> to unlock Ascendant Venomstone rewards.</p><p><b>Venomstones</b> can come from Heroic/Mythic raid bosses, <b>+10 or higher</b> Mythic+ keys, <b>Tier 11 Bountiful Delves</b>, and <b>Nightmare Prey Champion chests</b>. Upgrade qualifying fully upgraded Hero/Myth or maximum-quality Tidal crafted <em>weapons, trinkets, or necks</em> near the Catalyst. For a BM Hunter, favor the <b>weapon → trinkets → neck</b>.</p><a href="https://worldofwarcraft.blizzard.com/en-us/news/24304162/" target="_blank" rel="noopener noreferrer">Read the official patch notes ↗</a></div>
+        <div class="glossary">
+          <h3>Little glossary, big time saved</h3>
+          <div class="glossary-grid"><div><b>iLvl</b><span>Item level: a rough measure of gear power.</span></div><div><b>M0 / M+</b><span>Base Mythic dungeon / timed keystone dungeons.</span></div><div><b>Vault</b><span>One selected piece of weekly loot from your unlocked options.</span></div><div><b>Tier / 4-piece</b><span>Class-specific armor set bonuses active with multiple matching pieces.</span></div><div><b>Catalyst</b><span>Converts eligible non-tier armor to tier pieces.</span></div><div><b>BiS</b><span>Best-in-slot: a theoretical top item, not always your next best upgrade.</span></div><div><b>Sim</b><span>Simulate your exact character and gear using Raidbots / SimulationCraft.</span></div><div><b>Embellishment</b><span>A special crafted gear effect. You can equip two.</span></div></div>
+        </div>
+      </section>
+
+      <section id="sources" class="chapter">
+        <div class="section-kicker">08 / RECEIPTS & FURTHER READING</div>
+        <div class="section-title-row"><div><h2>Built on <span>current sources.</span></h2><p>Checked against sources dated in October 2026 or against verified Season 2 tables. Each source opens a full guide.</p></div></div>
+        <div class="source-grid">
+          <a href="https://www.wowhead.com/guide/classes/hunter/beast-mastery/bis-gear" target="_blank" rel="noopener noreferrer"><span>WOWHEAD / OCT 13</span><strong>BM Hunter BiS & gear guide</strong><small>Season 2 target pieces ↗</small></a>
+          <a href="https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-gear-best-in-slot" target="_blank" rel="noopener noreferrer"><span>ICY VEINS / OCT 12</span><strong>BM gear, trinkets & crafting</strong><small>Class-specific choices ↗</small></a>
+          <a href="https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-spec-builds-talents" target="_blank" rel="noopener noreferrer"><span>ICY VEINS / OCT 12</span><strong>Current Pack Leader builds</strong><small>Talent imports ↗</small></a>
+          <a href="https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-stat-priority" target="_blank" rel="noopener noreferrer"><span>ICY VEINS / OCT 12</span><strong>Single-target & M+ stats</strong><small>Stat priority context ↗</small></a>
+          <a href="https://www.icy-veins.com/wow/great-vault-guide" target="_blank" rel="noopener noreferrer"><span>ICY VEINS / SEASON 2</span><strong>Vault rewards & key table</strong><small>Dungeon and World breakpoints ↗</small></a>
+          <a href="https://www.icy-veins.com/wow/world-of-warcraft-gear-upgrading-guide" target="_blank" rel="noopener noreferrer"><span>ICY VEINS / SEASON 2</span><strong>Gear tracks & Mistcrests</strong><small>Upgrade mechanics ↗</small></a>
+          <a href="https://worldofwarcraft.blizzard.com/en-us/news/24304162/" target="_blank" rel="noopener noreferrer"><span>BLIZZARD / OCT 13</span><strong>Patch 12.1.5 notes</strong><small>Midseason changes ↗</small></a>
+          <a href="https://news.blizzard.com/en-us/article/24294369/midnight-season-2-is-now-live" target="_blank" rel="noopener noreferrer"><span>BLIZZARD / AUG 2026</span><strong>Official Season 2 launch</strong><small>Dungeons & raid roster ↗</small></a>
+          <a href="https://www.icy-veins.com/wow/weekly-to-do-list" target="_blank" rel="noopener noreferrer"><span>ICY VEINS / OCT 26</span><strong>Current weekly to-do guide</strong><small>Returning-player catch-up ↗</small></a>
+        </div>
+        <div class="disclaimer"><strong>How to use this guide:</strong> It is a <em>snapshot as of October 31, 2026 (patch 12.1.5 / Season 2)</em>, not an automatically updating game database. Patch tuning, loot tables, and expansion seasons can change; use linked current class guides and in-game tooltips for your last check. Recommendations are for PvE Beast Mastery Hunters only. This is an unofficial fan guide and is not affiliated with Blizzard Entertainment.</div>
+      </section>
+
+      <footer class="site-footer"><span class="footer-logo">✦ MIDNIGHT FIELD GUIDE</span><span>Made for the Hunter who came back to Azeroth.</span><a href="#top">Back to the top ↑</a></footer>
+    </main>
+  </div>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+</body>
+</html>
